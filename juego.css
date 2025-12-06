@@ -1,0 +1,74 @@
+body{
+
+    margin: 0;
+    padding: 0;
+
+}
+table{
+
+    border-collapse: collapse;
+    width: 100vw;
+    height: 70vh;
+
+}
+
+.numeracion{
+
+    width: 30px;
+    height: 10px;
+}
+
+td{
+    background-image: url("./imagenes/como-elegir-el-suelo-de-una-casa.jpeg");
+}
+
+.actual{
+     background-image: url("./imagenes/brant.jpg");
+    background-size: contain;      /* Hace que la imagen cubra todo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat;/* Evita que se repita */
+
+}
+
+.dirigir{
+    background-image: none;
+    background-color: red;
+}
+
+.tesoro{
+
+    background-image: url("./imagenes/tesoro.png");
+    background-size: contain;      /* Hace que la imagen cubra todo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat;/* Evita que se repita */
+}
+
+.dado {
+    width: 120px;
+    height: 120px;
+    background: white;
+    border: 4px solid black;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 10px;
+    gap: 10px;
+    margin: 15px 0;
+    transition: transform 0.3s;
+}
+
+.dado span {
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-radius: 50%;
+}
+
+.dado .activo {
+    background: black;
+}
+
+/* Animación al tirar */
+.dado.tirar {
+    transform: rotate(20deg);
+}
