@@ -95,7 +95,7 @@ function juego() {
         //si la celda target tiene como ide "99" y ademas la clase "actual" se desabilitara el boton y se terminara el juego
         if (evento.target.id == "99" && evento.target.className == "actual") {
 
-            //localStorage.setItem(nombre, `${contador}`);
+            
             console.log("HAS CONSEGUIDO EL TESORO");
             botonTirar.disabled = true;
             actualizarRecord(contador);
