@@ -154,3 +154,8 @@ button:hover{
     justify-content: center;
 }
 
+#seccionError{
+    display: flex;
+    justify-content: center;
+}
+
