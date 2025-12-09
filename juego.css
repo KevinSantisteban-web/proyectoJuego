@@ -10,6 +10,8 @@ table{
     width: 100vw;
     height: 70vh;
 
+    
+
 }
 
 .numeracion{
@@ -65,10 +67,90 @@ td{
 }
 
 .dado .activo {
-    background: black;
+    background: beige;
 }
 
 /* Animación al tirar */
 .dado.tirar {
     transform: rotate(20deg);
 }
+
+#dado{
+    margin-left: 10px;
+    background-color: #965A3E;
+}
+body{
+    background-color: bisque;
+}
+.principal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        height: 100vh;
+}
+form{
+    
+    background-color: #C19A6B;
+    border-radius: 30px;
+   padding: 80px;
+
+}
+
+.inicioJuego{
+
+    border-bottom: 1px solid beige;
+    color: beige;
+}
+
+label{
+    color: beige;
+}
+
+button{
+    color: #C19A6B;
+    background-color: beige;
+}
+
+input{
+    background-color: beige;
+    margin-left: 10px;
+}
+
+
+.luchar{
+    color: beige;
+}
+
+#tirar{
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 5px;
+    width: 80px;
+}
+
+#botones{
+    display: flex;
+    justify-content: center;
+}
+
+#jugar{
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 10px;
+}
+
+button:hover{
+
+    border: 1px solid black;
+}
+
+#input{
+    display: flex;
+    justify-content: center;
+}
+
+#seccionH1{
+    display: flex;
+    justify-content: center;
+}
+
