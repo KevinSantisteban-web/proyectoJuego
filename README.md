@@ -80,3 +80,16 @@ Jugador --> (Mover jugador)
 
 (Finalizar juego) --> (Guardar récord)
 Jugador --> (Consultar récord)
+
+# Decisiones de diseño:
+ Para el desarrollo de este proyecto se ha decidido implementar un tablero de 10x10 utilizando para ello JavaScript.
+
+La estructura del proyecto se dividió en varios archivos:
+-	Main.js -> Punto de entrada de la aplicación e inicializa el juego
+-	Tabla.js -> se encarga de generar la tabla, los botones y el dado de forma dinámica.
+-	Juego.js -> contiene la lógica principal para el funcionamiento del juego.
+El tablero se genera dinámicamente mediante el DOM para evitar el uso de HTML estático y permitir de esta manera una mayor flexibilidad. Las posiciones del tablero se identifican mediante IDs que representan las coordenadas de cada celda.
+Se utilizó localStorage para guardar el récord del menor número de tiradas, permitiendo así que el progreso del usuario se conserve, aunque se recargue la página.
+
+# Desafíos encontrados: 
+El principal desafío que he encontrado es conseguir la manera de que según el numero del dado se marque una casilla en rojo u otra y que, si el numero es superior a las casillas no nos marque ninguna, es decir, que solo marque los objetivos que realmente son posibles.
