@@ -1,6 +1,6 @@
     'use strict';
     import { juego } from "./juego.js";
-    function tabla() {
+    function generarTablero() {
 
         let botonJugar = document.getElementById("jugar");
         botonJugar.type = "button";
@@ -80,4 +80,4 @@
         
     }
 
-    export { tabla };
+    export { generarTablero };

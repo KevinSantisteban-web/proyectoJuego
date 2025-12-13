@@ -95,8 +95,6 @@ function juego() {
         //si la celda target tiene como ide "99" y ademas la clase "actual" se desabilitara el boton y se terminara el juego
         if (evento.target.id == "99" && evento.target.className == "actual") {
 
-            
-            console.log("HAS CONSEGUIDO EL TESORO");
             botonTirar.disabled = true;
             actualizarRecord(contador);
 
@@ -229,9 +227,9 @@ function juego() {
         // si no hay récord aún, o si el nuevo es mejor (menos tiradas)
         if (!record || tiradasActuales < parseInt(record)) {
             localStorage.setItem("recordTiradas", tiradasActuales);
-            console.log("¡Nuevo récord! Tiradas:", tiradasActuales);
+            alert("¡HAS CONSEGUIDO EL TESORO CON UN nuevo récord de tiradas de!: " + tiradasActuales + " tiradas");
         } else {
-            console.log("Récord actual:", record, "Tiradas de esta partida:", tiradasActuales,"tiradas");
+            alert("¡HAS CONSEGUIDO EL TESORO! con un récord actual de: "+  record +  " Tiradas mientras que esta partida has tirado un total de: " + tiradasActuales +" tiradas");
         }
     }
 }

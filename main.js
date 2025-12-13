@@ -1,11 +1,11 @@
 'use strict';
-import { tabla } from "./tabla.js";
-import { formulario } from "./formulario.js";
+import { generarTablero } from "./tabla.js";
+import { iniciarJuego } from "./formulario.js";
 window.onload = inicio;
 
 function inicio(){
 
-    formulario();
-    tabla();
+    iniciarJuego();
+    generarTablero();
 
 }

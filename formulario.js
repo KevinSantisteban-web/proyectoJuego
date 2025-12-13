@@ -1,5 +1,5 @@
 
-function formulario(){
+function iniciarJuego(){
     //variable "body" del DOM
     let cuerpo = document.body;
     //Creamos un div
@@ -49,7 +49,7 @@ function formulario(){
     seccionInput.appendChild(inputNombre);
 
     //creamos la seccion donde ira el parrafod e error
-    let seccionError = document.createElement("secction");
+    let seccionError = document.createElement("section");
     seccionError.id = "seccionError";
 
     formulario.appendChild(seccionError);
@@ -57,6 +57,7 @@ function formulario(){
     //creamos el parrafo que saltara al verificar y no cumplir con los requisitos
     let parrafoError = document.createElement("p");
     parrafoError.style.color = "red";
+    parrafoError.id = "parrafoError";
     seccionError.appendChild(parrafoError);
 
     //creamos la seccion dodne iran los botones
@@ -71,6 +72,7 @@ function formulario(){
     botonValidar.name = "validar";
     botonValidar.value = "introducir nombre";
     botonValidar.textContent = "introducir nombre";
+    botonValidar.id = "validar";
     //añadimos el boton validar
     seccion.appendChild(botonValidar);
 
@@ -85,7 +87,8 @@ function formulario(){
 
     //creamos el h1 de luchar
     let luchar = document.createElement("h1");
-    luchar.classList = "luchar";
+    luchar.id = "luchar";
+    luchar.className = "luchar";
 
     //creamos la seccion donde estara el h1 luchar
     let seccionH1 = document.createElement("section");
@@ -95,24 +98,28 @@ function formulario(){
     seccionH1.appendChild(luchar);
 
     //escuchamos el evento submit para que comprube que el nombre enviado es mayor a 4 letras
-    formulario.addEventListener("submit",(evento) =>{
+    formulario.addEventListener("submit",validarNombre);
 
-            
-        if(inputNombre.value.length < 4){
+        
+
+    
+}
+
+function validarNombre(evento){
+    if(document.getElementById("nombre").value.length < 4){
             evento.preventDefault();
-            parrafoError.textContent = "El nombre debe tener 4 o más letras";
-        }else if(/\d/.test(inputNombre.value)){
+            document.getElementById("parrafoError").textContent = "El nombre debe tener 4 o más letras";
+        }else if(/\d/.test(document.getElementById("nombre").value)){
             evento.preventDefault();
-            parrafoError.textContent = "Numero no permitidos";
+            document.getElementById("parrafoError").textContent = "Numero no permitidos";
         }
         else{
             evento.preventDefault();
-            parrafoError.textContent = "";
-            luchar.textContent = `A luchar heroe: ${inputNombre.value}`;
-            botonJugar.disabled = false;
-            botonValidar.disabled = true;
+            document.getElementById("parrafoError").textContent = "";
+            document.getElementById("luchar").textContent = `A luchar heroe: ${document.getElementById("nombre").value}`;
+            document.getElementById("jugar").disabled = false;
+            document.getElementById("validar").disabled = true;
         }
-    });
 }
-//exportamos la funcion
-export{formulario};
+//exportamos la funcion iniciarJuego
+export{iniciarJuego};
