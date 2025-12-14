@@ -14,7 +14,7 @@
             cuerpo.replaceChildren();
 
             let tabla = document.createElement("table");
-            tabla.border = "1";
+            tabla.style.border = "1px solid black";
             tabla.id = "table";
             cuerpo.appendChild(tabla);
 
@@ -31,16 +31,19 @@
                     if (i == 0 && j == 0) {
                         Td.className = "actual";
                         Td.id = `${i}${j}`;
+                        Td.style.border = "1px solid black";
                         Tr.appendChild(Td);
                     }
                     else if (i == 9 && j == 9) {
 
                         Td.className = "tesoro";
+                        Td.style.border = "1px solid black";
                         Td.id = `${i}${j}`;
                         Tr.appendChild(Td);
                     }
                     else {
                         Td.id = `${i}${j}`;
+                        Td.style.border = "1px solid black";
                         Tr.appendChild(Td);
                     }
                 }
